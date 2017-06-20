@@ -1,0 +1,47 @@
+.text-hide{ text-indent: -20000px; }
+html, body, #content{ width: 100%; height: 100%; overflow: hidden; background-color: #000;}
+img{ max-width: 100%; }
+#content{ position: relative; }
+.hidden{ display: none; }
+.bg-video{ /*position: absolute; left: 0; top: 0; z-index: 9999; */}
+.bg-video, .bg-video>*{ width: 100%; height: 100%; /*min-width: 100%; min-height: 100%;*/}
+
+.top-menu{ /*position: absolute; left: 0; top: 0;*/ width: 100%; z-index: 99997; }
+.top-menu .live-status{ position: relative; margin-left: .45rem; margin-top: .25rem; margin-bottom: .25rem; width: 7rem; height: 1.85rem; color: #fff; font-size: 0; overflow: hidden; border-radius: 1.85rem; background-color: #666;z-index:9999;}
+.top-menu .live-status>span{ display: inline-block; vertical-align: middle; }
+.top-menu .live-status .user-img{ float: left; width: 1.85rem; height: 100%;border-radius: 50%;background: #666666;}
+.top-menu .live-status .user-img img{ width: 100%; height: 100%; border-radius: 50%;}
+.top-menu .live-status .content{ margin-left: 1.85rem; padding-right: .925rem; font-size: .625rem; text-align: center; }
+.top-menu .live-status .content h4{ margin-top: .1rem; margin-bottom: -.15rem; font-weight: normal; font-size: .6rem; }
+.top-menu .live-status .content .n-dataOnline{ font-size: .5rem; margin-top: .1rem;}
+.top-menu .live-status .bg{ position: absolute; left: .925rem; top: 0; width: 6.075rem; height: 100%; background-color: rgba(0, 0, 0, 0.7); border-radius: 0 .9rem .9rem 0; z-index: -100;}
+.top-menu .close{ position: absolute; right: .45rem; top: .45rem; width: 1.55rem; height: 1.55rem; background: url(img/close.png) no-repeat center; background-size: cover; }
+
+.bottom-bar{ position: absolute; left: 0; bottom: 0; width: 100%; height: 2.85rem; line-height: 2.85rem; z-index: 999999; }
+.bottom-bar span{ display: inline-block; vertical-align: middle; }
+.bottom-bar input{ display: inline-block; vertical-align: middle; margin-left: .45rem; width: 59.375%; height: 1.85rem; line-height: 1.85rem; border-radius: 1.85rem; border: none; outline: none; background-color: #666; color: #fff; font-size: .75rem; text-indent: .75rem; }
+.bottom-bar .topicons{ position: relative; float: right; margin-right: .45rem; }
+.bottom-bar .topicons .icon{width: 1.85rem; height: 1.85rem; background-repeat: no-repeat; background-position: center center; text-indent: -20000px; background-size: cover; }
+.bottom-bar .icon.share{ margin-right: .3rem; background-image: url(img/share.png); }
+.bottom-bar .icon.like{ background-image: url(img/like.png); }
+.bottom-bar .openApp{ position: absolute; top: -1.75rem; right: 0;height: 1.25rem; padding: .25rem .3rem; border-radius: 1.3rem; line-height: .8rem; background-color: rgba(255, 255, 255, .7); color: #666; font-size: .46375rem; white-space: nowrap; overflow: hidden; z-index: 10100; box-sizing: border-box;}
+.bottom-bar .openApp i{ display: inline-block; vertical-align: top; width: .675rem; height: .725rem; margin-right: .125rem; background: url(img/app_icon.png) no-repeat left center; background-size: cover;}
+/*分享至*/
+.bottom-bar .share-panel{ position: absolute; bottom: 0; left: 0; width: 100%; background-color: #fff; z-index: 250;}
+.bottom-bar .share-panel h5{ margin-top: .45rem; margin-left: .625rem; font-size: .4625rem; }
+.bottom-bar .share-panel .icons{ margin-top: .375rem; margin-bottom: .525rem; font-size: 0; }
+.bottom-bar .icons > span{ width: 25%; text-align: center; }
+.bottom-bar .icons a{ display: inline-block; width: 25%; padding-top: 2.15rem; padding-left: 0; margin: 0; margin-bottom: .325rem; background-repeat: no-repeat; background-position: center top; text-align: center; box-sizing: border-box; font-size: .3rem;} 
+.bottom-bar .icons a.bds_weixin{ background-image: url(img/wechat.png); }
+.bottom-bar .icons a.bds_weixinpengyou{ background-image: url(img/pengyouquan.png); }
+.bottom-bar .icons a.bds_tsina{ background-image: url(img/weibo.png); }
+.bottom-bar .icons a.bds_qzone{ background-image: url(img/qqzone.png); }
+.bottom-bar .share-panel button{ width: 100%; height: 1.5rem; line-height: 1.5rem; border: 1px solid #e5e5e5; border-width: 1px 0; text-align: center; background-color: transparent; }
+
+
+.black-layer{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); }
+
+
+.maskbox{background: #000000;display: none;}
+.maskbox p{color: #fff;text-align:center;font-size: 18px;font-weight: bold;}
+.maskbox a{margin-left: 10px;color: #ce171b;border-bottom: 2px solid #ce171b;line-height: 20px;text-decoration: none;}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>【“一带一路”改变你我生活】你言我语聊不停，看“一带一路”联通世界，惠及你我。</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <script type="text/javascript" src="js/plug/swiper.min.js"></script>
+    <script type='text/javascript'>
+        var _gsq = _gsq || [];
+        (function () {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = (location.protocol == 'https:' ? 'https://static.' : 'http://static.') + 'gridsumdissector.com/js/Clients/GWD-002959-E22800/gs.js';
+            var firstScript = document.getElementsByTagName('script')[0];
+            firstScript.parentNode.insertBefore(s, firstScript);
+        })();
+    </script>
+
+</head>
+<body id="imgText">
+<div style="display: none;"><img src="img/share500.png"></div>
+
+<section class="one" v-show="stat==2">
+<div class="zi">
+    <ul>
+        <li class="o1 animated bounceInDown " style="animation-delay:0.5s"><img src="img/o1.png"></li>
+        <li class="o2 animated bounceInDown " style="animation-delay:0.7s"><img src="img/o2.png"></li>
+        <li class="o3 animated bounceInDown " style="animation-delay:0.9s"><img src="img/o3.png"></li>
+        <li class="o4 animated bounceInDown " style="animation-delay:1.1s"><img src="img/o4.png"></li>
+        <li class="o5 animated bounceInDown " style="animation-delay:1.3s"><img src="img/o5.png"></li>
+        <li class="o6 animated bounceInDown  " style="animation-delay:0.5s"><img src="img/o6.png"></li>
+    </ul>
+
+</div>
+
+<div class="dl animated bounceIn" style="animation-delay:2s"><img src="img/1d.png"></div>
+
+    <div class="head clear">
+    <ul class=" clear">
+        <li class="man " v-on:click="login(1)">
+            <div class="img animated flipInY" style="animation-delay:2.5s">
+                <img src="img/head1.png" alt=""/>
+            </div>
+            <div class="text animated flipInX" style="animation-delay:2.5s">男</div>
+        </li>
+        <li class="woman" v-on:click="login(2)">
+            <div class="img animated flipInY" style="animation-delay:2.5s">
+                <img src="img/head2.png" alt=""/>
+            </div>
+            <div class="text animated flipInX" style="animation-delay:2.5s">女</div>
+        </li>
+
+    </ul>
+    <div class="visitor">您是第<span>{{scaler}}</span>位访客</div>
+</div>
+
+
+</section>
+
+<section class="three" v-show="stat==3">
+    <div class="banner">
+        <!--顶部背景图片-->
+        <div class="logo">
+            <img src="img/logo.png" alt=""/>
+
+            <div class="people">互动总人次：<span id="count">{{scaler}}</span></div>
+            <div class="user">
+                <div><img v-bind:src="user.headimgurl"></div>
+                <p>来自<span>{{user.nickname}}</span>的网友</p></div>
+        </div>
+        <!--切换按钮-->
+        <div class="content">
+            <ul class="btn">
+                <li class="button active" v-on:click="tagChange(false,0)">
+                    <div class="hu"></div>
+                </li>
+                <li class="button once " v-on:click="tagChange(true,1)">
+                    <div class="shai"></div>
+                </li>
+            </ul>
+            <!--互动话题-->
+            <div v-show="iscomment" class="switch talk show">
+                <p class="dec">
+                    "一带一路"国家,哪里留下了你的足迹？美丽的风光,丰富的美食,好客的人民,什么最让你流连忘返？
+                    快晒出你的美图或者小视频,分享你的"一带一路"之旅。
+                </p>
+                <form id="upimgForm" name="form1" method="post" action=""
+                      ENCTYPE="multipart/form-data">
+                    <div class="send" v-show="!dialogEnd">
+                        <div class="comment clear">
+                     <span class="com_input">
+                        <input type="text" v-model="message" placeholder="我来说两句！晒个图！"/>
+                        </span>
+                     <span class="li-middle">
+                          <input type="file" accept="image/png;image/jpeg" name="pic" id="ffile">
+                            <img src="img/chuan.png" alt=""/>
+                      </span>
+                            <span class="li-bottom" v-on:click="submit()">发送</span>
+
+                        </div>
+                        <div class="s-bottom" v-show="picput">
+                            <div class="image">
+                                <div class="im_pic"><img src="" id="fimg"></div>
+                                <div class="cha">
+                                    <img src="img/cha.png" alt="" v-on:click="removePic()"/>
+                                </div>
+                                <div class="loading">
+                                    <div class="progress" id="fprogress">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="showTime">
+                    <ul>
+                        <li class="clear" v-for="com in cs">
+                            <div class="user">
+                                <div class="u_head"><img v-bind:src="com.mark"></div>
+                                <div>
+                                    <p class="u_name" v-show="!com.self">来自<span>{{com.author}}</span>的网友</p>
+                                    <p class="u_name" v-show="com.self"><span>[我自己]审核中</span></p>
+                                    <p class="u_time">{{com.dateline*1000|timeDate}}</p>
+                                </div>
+
+                            </div>
+                            <div class="reveal">
+                                <p class="reveal_text" v-html="com.message">{{com.message}}</p>
+                                <div class="pic" v-show="com.pics[0]"><img v-bind:src="com.pics[0]"
+                                                                           v-on:click="fullimg($event)"
+                                                                           onload="imgload(this)"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="more" v-on:click="more()" v-show="!isEnd">
+                        {{state}}
+                    </div>
+
+                </div>
+
+            </div>
+            <!--网友评论-->
+            <div v-show="!iscomment" class="switch vote " >
+                <div class="vote_warp"  v-show="!over">
+                    <div class="title">
+                        <span class="span1">Q{{sindex+1}}</span>
+                        <p>/Q3</p>
+                    </div>
+                    <p class="more">{{vote.votequestion}}（多选题）</p>
+                    <ul class="options">
+                        <li class="o_click" v-for="opt in vote.options" v-on:click="optChange($index)">
+                            <div class="bg1"></div>
+                            <p>
+                                {{opt.option}}
+                            </p>
+                        </li>
+                        <input type="text" v-show="voted" v-model="other" placeholder="说说你想说的">
+                    </ul>
+                    <div class="next" v-on:click="submitVote()" v-show="sindex<3">
+                        下一题
+                    </div>
+                </div>
+                <div class="vote_result" v-show="over">
+                    <div class="result_item" v-for="item in votes">
+                        <p class="title">{{item.votequestion}}</p>
+                        <ul class="common ">
+                            <li v-for="opt in item.options">
+                                <div class="option color_one">
+                                    <span class="o_yuan back_one"></span>
+                                    <span class="o_text">{{opt.option}}</span>
+                                </div>
+                                <div class="number">
+                                    <div class="progress">
+                                        <div style="width:{{ opt.rate }};"></div>
+                                    </div>
+                                    <p>{{opt.rate|roundDate }}%</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="upvideo">
+        <a href="http://ishow.xiyou.cctv.com/active.html?iid=52340"> <img src="img/upvideo.png"></a>
+    </div>
+    <footer>
+        <img src="img/copy.png">
+    </footer>
+    <div class="zan"  v-on:click="zanAction()">
+        <div class="zan_img animated  tada " >
+            <img src="img/zan.png" alt="">
+        </div>
+        <p>
+            {{zan}}赞
+        </p>
+    </div>
+</section>
+<div id='mySwipe' style='max-width:620px;margin:0 auto' class='swipe' v-on:click="hideSwipe()" v-show="swipe">
+    <img src="">
+</div>
+<div class="errocover" v-show="picerro||texterro||voteerro||tijiaosucces||sendsuccess||blankerro" v-on:click="hidePicErro()">
+    <div></div>
+    <img src="img/upimgerror.png" v-show="picerro">
+    <img src="img/limiterror.png" v-show="texterro">
+    <img src="img/voteerror.png" v-show="voteerro">
+    <img src="img/tijiaosucces.png" v-show="tijiaosucces">
+    <img src="img/sendsuccess.png" v-show="sendsuccess">
+    <img src="img/blankerro.png" v-show="blankerro">
+</div>
+<script type="text/javascript" src="js/plug/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/plug/jquery.form.js"></script>
+<script type="text/javascript" src="js/plug/countUp.js"></script>
+
+<script src="dist/build.js"></script>
+<script>
+
+    function imgload(e) {
+        var wi = e.width,
+                hi = e.height,
+                base = 20,
+
+                wb = wi / base,
+                wm = 3,
+                hm = 3,
+                hb = hi / base;
+        if (wb < hb) {
+            if (hb > 9) {
+                hi = 9;
+                wi = wb / hb * hi;
+            } else {
+                hi = hb;
+                wi = wb / hb * hi;
+            }
+        } else {
+            if (wb > 9) {
+                wi = 9;
+                hi = hb / wb * wi;
+
+
+            } else {
+                wi = wb;
+                hi = hb / wb * wi;
+
+            }
+        }
+        $(e).css({
+            "width": wi + "rem",
+            "height": hi + "rem"
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+{
+    "data": {
+        "msgCount": "115",
+        "refresh": "15",
+        "detailUrl": "http://hot.news.cntv.cn/api/list/liveMessageList?id=INTE1473404243300215",
+        "liveDesc": "",
+        "liveId": "INTE1473404243300215",
+        "liveImage": "http://p1.img.cctvpic.com/photoworkspace/2016/09/15/2016091523065951375.jpg",
+        "liveTitle": "感受超震撼",
+        "liveType": "3",
+        "liveUrl": "14a0c9dc61c54e80b7b18aa3136516f9",
+        "liveState": "1",
+        "liveDate": "1473404243000",
+        "width": "640",
+        "height": "360",
+        "liveRate": "1",
+        "msgFlag": "1",
+        "topicFlag": "1",
+        "interactFlag": "1",
+        "interactUrl": "http://itv.cctv.com/html/indexhtml/zhongqiu_praise.html",
+        "vtype": "17",
+        "countFlag": "1",
+        "remark": "0",
+        "msgTag": "实况直播1",
+        "topicTag": "边看边聊1",
+        "interactTag": "互动1",
+        "whichTag": "多视角",
+        "whichFlag": "1",
+        "liveList": [
+            {
+                "height": "360",
+                "width": "640",
+                "liveUrl": "c5238988056a43fc825afae14719766e",
+                "liveTitle": "感受超震撼",
+                "liveImage": "http://p1.img.cctvpic.com/photoworkspace/2016/09/15/2016091523065951375.jpg",
+                "liveType": "2",
+                "liveRate": "1"
+            },
+            {
+                "height": "360",
+                "width": "640",
+                "liveUrl": "96ad1e76f1094d11a0afb3961dfe3107",
+                "liveTitle": "感受超震撼",
+                "liveImage": "http://p1.img.cctvpic.com/photoworkspace/2016/09/15/2016091523065951375.jpg",
+                "liveType": "3",
+                "liveRate": "1"
+            },
+            {
+                "height": "360",
+                "width": "640",
+                "liveUrl": "df3a70b694a244fe9ae28023053ddaa7",
+                "liveTitle": "感受超震撼",
+                "liveImage": "http://p1.img.cctvpic.com/photoworkspace/2016/09/15/2016091523065951375.jpg",
+                "liveType": "2",
+                "liveRate": "1"
+            }
+        ]
+    },
+    "msgList": [
+        {
+            "detailUrl": "",
+            "msgTitle": "",
+            "videoImg": "http://p1.img.cctvpic.com/photoworkspace/2016/09/16/2016091619421140785.jpg",
+            "videoUrl": "adb09d19cf18490d8308d1650935d14a",
+            "rwName": "央视新闻客户端",
+            "topFlag": "0",
+            "msgTime": 1474025775000,
+            "type": "0",
+            "msg": "消息文字",
+            "imgList": [
+                {
+                    "num": "1",
+                    "photo_url": "http://p1.img.cctvpic.com/photoworkspace/2016/09/16/2016091619421799816.jpg",
+                    "width": "456",
+                    "height": "310"
+                },
+                {
+                    "num": "2",
+                    "photo_url": "http://p1.img.cctvpic.com/photoworkspace/2016/09/16/2016091619422393061.jpg",
+                    "width": "472",
+                    "height": "311"
+                },
+                {
+                    "num": "3",
+                    "photo_url": "http://p1.img.cctvpic.com/photoworkspace/2016/09/16/2016091619422730924.jpg",
+                    "width": "459",
+                    "height": "311"
+                }
+            ],
+            "msgId": "1474026149622",
+            "liveUrl": "",
+            "rwImg": "http://p1.img.cctvpic.com/photoworkspace/2016/09/13/2016091313230069529.png",
+            "urlDesc": "",
+            "msgImage": "http://p1.img.cctvpic.com/photoworkspace/2016/09/16/2016091619421799816.jpg"
+        }
+    ]
+}

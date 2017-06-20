@@ -1,0 +1,1 @@
+{"version":3,"sources":["ma.js"],"names":[],"mappings":";;;;;AAAA;;;AAGA,IAAI,MAAI,SAAJ,GAAI,GAAU;AACd,WAAO,IAAP;AACH,CAFD;AAGO,IAAI,kBAAI;AACX,iBAAY;AADD,CAAR","file":"ma-compiled.js","sourcesContent":["/**\r\n * Created by mxl on 2017/2/28.\r\n */\r\nvar ddd=function(){\r\n    return 1111;\r\n}\r\nexport var ut ={\r\n    'isBoolean':ddd\r\n};\r\n\r\n"]}

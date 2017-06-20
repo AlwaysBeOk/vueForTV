@@ -1,0 +1,593 @@
+html, body {
+  height: 100%;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  width: 100%; }
+
+.one {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: url("img/one.png");
+  background-size: 100% 100%; }
+  .one .man {
+    float: left;
+    margin-left: 2.75rem; }
+  .one .woman {
+    float: right;
+    margin-right: 2.75rem; }
+  .one .head {
+    bottom: 4rem;
+    position: absolute;
+    width: 100%; }
+  .one ul {
+    position: relative;
+    width: 100%; }
+  .one li .img {
+    width: 6.15rem; }
+    .one li .img img {
+      display: block;
+      width: 100%; }
+  .one li .text {
+    width: 3.25rem;
+    height: 1.625rem;
+    text-align: center;
+    line-height: 1.625rem;
+    background-color: #f29425;
+    color: white;
+    margin: 0 auto;
+    border-radius: 0.8125rem;
+    box-shadow: 0.5px 3px 1px #714414; }
+  .one .visitor {
+    margin-top: 0.3rem;
+    color: #f3a622;
+    font-size: 0.8rem;
+    vertical-align: bottom;
+    width: 100%;
+    text-align: center; }
+    .one .visitor span {
+      display: inline-block;
+      color: #ffffff;
+      font-size: 0.9rem;
+      padding: 0 0.3rem; }
+
+.banner .logo {
+  position: relative;
+  border-bottom: 2px solid #c79620; }
+  .banner .logo .people {
+    position: absolute;
+    top: 0.25rem;
+    height: 1.4rem;
+    text-align: center;
+    line-height: 1.4rem;
+    padding: 0 0.625rem 0 0.3rem;
+    background-color: #643c0e;
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+    font-size: 0.65rem;
+    color: #ffffff;
+    letter-spacing: 1px; }
+    .banner .logo .people #count {
+      color: #f29425;
+      font-size: 0.75rem; }
+  .banner .logo img {
+    width: 100%;
+    display: block;
+    z-index: -9999; }
+  .banner .logo .user {
+    position: absolute;
+    bottom: 0.5rem;
+    width: 100%; }
+    .banner .logo .user div {
+      width: 2.5rem;
+      height: 2.5rem;
+      overflow: hidden;
+      left: 50%;
+      position: relative;
+      transform: translate(-50%, 0%); }
+    .banner .logo .user p {
+      display: block;
+      width: 100%;
+      color: #000;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      font-weight: 500;
+      text-align: center; }
+      .banner .logo .user p span {
+        display: inline-block;
+        color: #fff;
+        padding: 0px 0.3rem;
+        font-size: 0.9rem; }
+.banner .change {
+  margin: 0px auto;
+  margin-top: 1.75rem;
+  width: 96%;
+  height: 2.5rem; }
+  .banner .change li {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    height: 2.5rem;
+    border: 2px solid #c79620;
+    border-top-right-radius: 1.25rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom: none; }
+    .banner .change li a {
+      display: block;
+      width: 8.35rem;
+      height: 2rem;
+      line-height: 1.8rem;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 0.85rem;
+      text-shadow: #ea5b0d 1px 1px 0px; }
+    .banner .change li .white {
+      color: #ffb000;
+      border-radius: 1rem; }
+  .banner .change .active {
+    border: none;
+    border-bottom: 2px solid #c79620; }
+    .banner .change .active .white {
+      color: #ffffff;
+      background-color: #fd8724; }
+    .banner .change .active span {
+      width: 100%;
+      height: 1.75rem;
+      display: block;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      border-bottom-left-radius: 0.75rem;
+      border-bottom-right-radius: 0.75rem;
+      background-color: #fdaf2a; }
+.banner .content {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0px auto;
+  border: 1px solid #bfbfbf;
+  box-sizing: border-box;
+  width: 96%;
+  margin-top: 2rem; }
+  .banner .content .btn {
+    position: absolute;
+    top: -23px;
+    left: 0;
+    width: 100%; }
+    .banner .content .btn li {
+      width: 48%;
+      height: 2.25rem;
+      float: left; }
+      .banner .content .btn li div {
+        width: 100%;
+        height: 100%; }
+    .banner .content .btn .once {
+      float: right; }
+    .banner .content .btn .hu {
+      background-image: url("img/click1.png");
+      background-size: 100% 100%; }
+    .banner .content .btn .shai {
+      background-image: url("img/click2.png");
+      background-size: 100% 100%; }
+    .banner .content .btn .active .hu {
+      background-image: url("img/click3.png");
+      background-size: 100% 100%; }
+    .banner .content .btn .active .shai {
+      background-image: url("img/click4.png");
+      background-size: 100% 100%; }
+  .banner .content .talk .dec {
+    margin-top: 1.5rem;
+    width: 100%;
+    font-size: 0.7rem;
+    line-height: 1rem;
+    padding: 0px 0.3rem;
+    padding-bottom: 0.3rem;
+    box-sizing: border-box; }
+  .banner .content .talk .text {
+    margin: 0.5rem 0.5rem 0;
+    text-indent: 1.5rem;
+    font-size: 0.65rem;
+    font-weight: 500; }
+  .banner .content .talk .send {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f5f5f6;
+    border-top: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2; }
+    .banner .content .talk .send span {
+      display: inline-block;
+      float: left; }
+    .banner .content .talk .send .comment {
+      padding-bottom: 0.4rem;
+      padding-top: 0.4rem; }
+      .banner .content .talk .send .comment .com_input input {
+        width: 12rem;
+        height: 1.8rem;
+        box-sizing: border-box;
+        float: left;
+        margin-left: 0.3rem;
+        padding-left: 0.6rem;
+        border: 1px solid #ccc;
+        color: #999999;
+        border-radius: 5px;
+        font-size: 0.75rem; }
+      .banner .content .talk .send .comment .li-middle {
+        float: left;
+        width: 1.75rem;
+        height: 1.5rem;
+        margin: 0.05rem 0 0 0.5rem;
+        position: relative;
+        padding-top: 0.1rem; }
+        .banner .content .talk .send .comment .li-middle input {
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          display: block;
+          z-index: 100;
+          position: absolute; }
+        .banner .content .talk .send .comment .li-middle img {
+          display: block;
+          height: 1.5rem;
+          margin: 0px auto; }
+      .banner .content .talk .send .comment .li-bottom {
+        float: right;
+        width: 2.45rem;
+        height: 1.5rem;
+        margin: 0.15rem 0.3rem 0 0.5rem;
+        line-height: 1.5rem;
+        text-align: center;
+        background-color: #fa7d23;
+        color: #ffffff;
+        border-radius: 5px;
+        font-size: 0.75rem; }
+    .banner .content .talk .send .s-tag {
+      padding-top: 0.1rem;
+      padding-bottom: 0.5rem;
+      padding-left: 0.3rem;
+      padding-right: 0.3rem;
+      border-top: 1px solid #d2d2d2;
+      border-bottom: 1px solid #d2d2d2; }
+      .banner .content .talk .send .s-tag ul {
+        width: 100%;
+        margin-top: 0.5rem; }
+        .banner .content .talk .send .s-tag ul li {
+          float: left;
+          /* padding: 0rem 0.3rem; */
+          width: 29%;
+          margin-right: 5%;
+          font-size: 0.8rem;
+          line-height: 1.6rem;
+          border-radius: 0.8rem;
+          border: 1px #919191 solid;
+          text-align: center; }
+        .banner .content .talk .send .s-tag ul li:last-child {
+          margin-right: 0; }
+        .banner .content .talk .send .s-tag ul .active {
+          background-color: #007aff;
+          color: #FFF; }
+    .banner .content .talk .send .s-bottom {
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem; }
+      .banner .content .talk .send .s-bottom .image {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 5px;
+        margin: 0px auto;
+        position: relative;
+        background-color: red; }
+        .banner .content .talk .send .s-bottom .image .im_pic {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+          background-color: #FFF; }
+          .banner .content .talk .send .s-bottom .image .im_pic img {
+            width: 100%;
+            height: 100%;
+            left: 50%;
+            top: 50%;
+            margin-left: -1.5rem;
+            margin-top: -1.5rem;
+            position: absolute; }
+        .banner .content .talk .send .s-bottom .image .loading {
+          width: 100%;
+          height: 0.3rem;
+          border-radius: 1px;
+          border: 1px solid #008800;
+          position: absolute;
+          bottom: 0.3rem;
+          box-sizing: border-box; }
+          .banner .content .talk .send .s-bottom .image .loading .progress {
+            width: 0%;
+            height: 100%;
+            max-width: 100%;
+            background-color: #008800;
+            border-radius: 1px; }
+        .banner .content .talk .send .s-bottom .image .cha {
+          width: 1rem;
+          height: 1rem;
+          position: absolute;
+          right: -0.5rem;
+          top: -0.5rem; }
+          .banner .content .talk .send .s-bottom .image .cha img {
+            width: 100%;
+            height: 100%; }
+  .banner .content .talk .showTime {
+    background-color: #fff;
+    height: 100%;
+    overflow: hidden; }
+    .banner .content .talk .showTime .user {
+      margin-top: 0.75rem;
+      margin-left: 0.4rem;
+      height: 2rem; }
+      .banner .content .talk .showTime .user div {
+        float: left;
+        height: 2rem; }
+      .banner .content .talk .showTime .user .u_head {
+        width: 2rem;
+        height: 2rem;
+        overflow: hidden;
+        margin-right: 0.25rem; }
+        .banner .content .talk .showTime .user .u_head img {
+          width: 100%; }
+      .banner .content .talk .showTime .user .u_name {
+        font-size: 0.75rem;
+        color: #000; }
+        .banner .content .talk .showTime .user .u_name span {
+          color: #fc7d00;
+          display: inline-block;
+          padding: 0 0.2rem; }
+      .banner .content .talk .showTime .user .u_time {
+        font-size: 0.5rem;
+        color: #999999;
+        line-height: 1rem; }
+      .banner .content .talk .showTime .user .right {
+        float: right;
+        margin-right: 0.5rem;
+        margin-top: 0.8rem; }
+        .banner .content .talk .showTime .user .right img {
+          margin-top: 1rem;
+          width: 0.7rem;
+          height: 0.7rem;
+          float: left; }
+        .banner .content .talk .showTime .user .right .u_people {
+          margin-top: 1rem;
+          font-size: 0.6rem;
+          line-height: 0.6rem;
+          color: #666666;
+          float: left; }
+        .banner .content .talk .showTime .user .right .zan {
+          position: relative;
+          float: right;
+          font-size: 0.6rem;
+          line-height: 0.8rem;
+          color: #9da1a7; }
+        .banner .content .talk .showTime .user .right .self {
+          display: none; }
+        .banner .content .talk .showTime .user .right i {
+          background: url(img/zan2.png);
+          background-size: 100% 100%;
+          height: 0.7rem;
+          width: 0.75rem;
+          display: inline-block;
+          position: absolute;
+          left: -1rem; }
+        .banner .content .talk .showTime .user .right .active {
+          color: #fe4a37; }
+          .banner .content .talk .showTime .user .right .active i {
+            background: url(img/zan1.png);
+            background-size: 100% 100%; }
+    .banner .content .talk .showTime .reveal {
+      margin: 0rem 0rem 0 2.65rem;
+      -webkit-box-shadow: 0 1px 1px -1px #999;
+      padding-bottom: 0.5rem; }
+      .banner .content .talk .showTime .reveal .reveal_text {
+        font-size: 0.75rem;
+        line-height: 1.1rem;
+        color: #333333; }
+      .banner .content .talk .showTime .reveal img {
+        margin-top: 0.3rem; }
+    .banner .content .talk .showTime .more {
+      font-size: 0.8rem;
+      color: #666;
+      background-color: #f5f5f6;
+      height: 2rem;
+      line-height: 2rem;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 2px;
+      border-bottom: 1px #d5d5d6 solid;
+      border-top: 1px #d5d5d6 solid; }
+  .banner .content .vote {
+    font-size: 0.8rem; }
+    .banner .content .vote .title {
+      overflow: hidden;
+      margin-top: 1.9rem; }
+      .banner .content .vote .title span, .banner .content .vote .title p {
+        float: left; }
+      .banner .content .vote .title .span1 {
+        color: #da6426;
+        margin-left: 7.7rem; }
+    .banner .content .vote .more {
+      margin-top: 0.75rem;
+      margin-left: 0.3rem;
+      font-size: 0.8rem; }
+    .banner .content .vote .options {
+      overflow: hidden;
+      margin-top: 1rem;
+      margin-left: 0.2rem; }
+      .banner .content .vote .options li {
+        overflow: hidden;
+        padding-bottom: 0.3rem; }
+        .banner .content .vote .options li div {
+          width: 1.1rem;
+          height: 1.3rem;
+          float: left; }
+        .banner .content .vote .options li p {
+          float: left;
+          font-size: 0.8rem;
+          margin-left: 0.25rem;
+          margin-top: 0.13rem; }
+        .banner .content .vote .options li .bg1 {
+          background-image: url("img/quan1.png");
+          background-size: 100% 100%; }
+      .banner .content .vote .options input {
+        margin-left: 1.3rem;
+        border: 1px solid #000;
+        font-size: 0.8rem;
+        line-height: 1.4rem;
+        width: 65%;
+        border-radius: 5px;
+        padding-left: 0.3rem; }
+      .banner .content .vote .options .active .bg1 {
+        background-image: url("img/quan2.png");
+        background-size: 100% 100%; }
+    .banner .content .vote .kuang {
+      width: 100%;
+      position: relative; }
+      .banner .content .vote .kuang .kuang_p {
+        width: 12rem;
+        height: 1.75rem;
+        border: 1px black solid;
+        margin-left: 1.4rem;
+        border-radius: 3px; }
+      .banner .content .vote .kuang .zan {
+        position: absolute;
+        top: -1.3rem;
+        right: -0.5rem; }
+        .banner .content .vote .kuang .zan .zan_img {
+          width: 3.5rem; }
+        .banner .content .vote .kuang .zan p {
+          color: #b94242;
+          font-size: 0.5rem;
+          text-align: center;
+          width: 3.5rem; }
+    .banner .content .vote .next {
+      width: 8.1rem;
+      height: 1.85rem;
+      margin: 1rem auto 1rem;
+      background-color: #da6426;
+      border-radius: 0.925rem;
+      text-align: center;
+      line-height: 1.85rem;
+      color: #ffffff;
+      box-shadow: 0.5px 6px 1px #be4515; }
+    .banner .content .vote .vote_result {
+      margin-top: 1.5rem; }
+    .banner .content .vote .result_item .title {
+      display: block;
+      background-color: #e7e7e7;
+      padding: 0.5rem 0.3rem;
+      font-size: 0.8rem;
+      margin-top: 0.3rem; }
+    .banner .content .vote .result_item ul li {
+      margin-top: 0.3rem; }
+      .banner .content .vote .result_item ul li .option {
+        margin-left: 2.1rem; }
+      .banner .content .vote .result_item ul li .number {
+        width: 100%;
+        height: 1.75rem; }
+        .banner .content .vote .result_item ul li .number .progress {
+          float: left;
+          width: 60%;
+          height: 1rem;
+          margin: 0.25rem 0.5rem 0 2.1rem;
+          border: 1px solid #888888;
+          border-radius: 0.5rem; }
+          .banner .content .vote .result_item ul li .number .progress div {
+            width: 4.2rem;
+            height: 1rem;
+            background-color: #ff8700;
+            border-radius: 0.5rem; }
+        .banner .content .vote .result_item ul li .number p {
+          float: left;
+          font-size: 0.75rem;
+          margin-top: 0.25rem; }
+.banner .hide {
+  display: none; }
+.banner .ver {
+  visibility: hidden; }
+
+.zan {
+  position: fixed;
+  right: 0.5rem;
+  bottom: 8rem;
+  width: 3.5rem; }
+  .zan div {
+    width: 100%; }
+  .zan img {
+    width: 100%; }
+  .zan p {
+    color: #b94242;
+    font-size: 0.6rem;
+    text-align: center;
+    width: 100%; }
+
+footer {
+  padding-top: 1rem;
+  padding-bottom: 3.5rem;
+  position: relative;
+  width: 100%; }
+  footer img {
+    display: block;
+    margin: 0px auto;
+    width: 40%; }
+
+.upvideo {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  font-size: 0px;
+  z-index: 1; }
+  .upvideo img {
+    width: 100%;
+    font-size: 0px; }
+
+.swipe {
+  position: relative;
+  z-index: 9999; }
+
+.swipe-wrap {
+  overflow: scroll;
+  position: relative; }
+
+.errocover {
+  z-index: 600;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px; }
+  .errocover div {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0px;
+    z-index: 600; }
+  .errocover img {
+    width: 80%;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    z-index: 1000; }
+
+#mySwipe {
+  background: #333333;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: scroll; }
+
+#mySwipe img {
+  width: 100%;
+  display: block;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+/*# sourceMappingURL=index.css.map */

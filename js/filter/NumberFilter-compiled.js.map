@@ -1,0 +1,1 @@
+{"version":3,"sources":["NumberFilter.js"],"names":[],"mappings":";;AAAA;;;;;;AAEA,cAAI,MAAJ,CAAW,WAAX,EAAwB,UAAU,KAAV,EAAiB;;AAErC,WAAO,KAAK,KAAL,CAAW,KAAX,CAAP;AACH,CAHD","file":"NumberFilter-compiled.js","sourcesContent":["import Vue from 'vue'\r\n\r\nVue.filter(\"roundDate\", function (input) {\r\n\r\n    return Math.round(input);\r\n});"]}

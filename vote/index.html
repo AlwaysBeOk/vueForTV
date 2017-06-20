@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<title>央视影音</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script src="http://www.cctv.com/Library/a2.js"></script>
+		
+		<script>
+			//page direction
+			//获取地址栏参数
+			function GetQueryString(name){
+			    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+			    var r = window.location.search.substr(1).match(reg);
+			    if(r!=null)return  unescape(r[2]); return null;
+			}
+
+			(function(){
+				var _vtype = GetQueryString('vtype');
+				if( _vtype && _vtype != 16){
+					window.location = 'type'+ _vtype +'.html?vtype='+  _vtype+'&itemid='+ GetQueryString('itemid');
+				}
+			})();
+		</script>
+		<script src="js/wauto.js"></script>
+		
+	</head>
+	<body>
+		<div class="page-sy">
+			<div class="n-videoaBox">
+				<!-- <video src="" poster="img/datu.png"></video> -->
+				<div id="index_video_box"></div>
+				<div class="maskbox" id="maskbox">
+				 	<p>想看完整版<a id="newLayer" href="javascript:;">打开央视影音客户端</a></p>
+				</div>
+				<!-- <div class="n-boxTop">
+					<p id="liveTitle">2016央视春晚</p>
+				</div> -->
+				<!-- <div class="n-boxBottom">
+					<p class="n-videoPlayBtn"></p>
+					<p class="n-videoFullScreen"></p>
+				</div> -->
+				<div class="n-boxPause">
+					<div class="n-play">
+						<i></i>点击观看视频
+					</div>
+				</div>
+			</div>
+			<div class="n-dataOnline">
+				<p><!-- 123456人在线 --></p>
+			</div>
+			<div class="n-navImg">
+				<div class="swiper-container">
+					<div class="swiper-wrapper" id="videoList">
+						<!-- <div class="swiper-slide">
+							<img src="img/xiaotu.png" alt="" />
+							<div class="n-navWord">2016央视春晚</div>
+							<div class="n-onLive">
+								<p>直播中</p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<img src="img/xiaotu.png" alt="" />
+							<div class="n-navWord">CNTV网络春晚</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="n-downLoad">
+				<a href="javascript:;" id="hasApp"><div class="n-downLoadBtn">打开客户端观看，画质更清晰</div></a>
+			</div>
+			<div class="n-nav">
+				<ul class="clearfix">
+					<li class="on live"></li>
+					<li class="live_chat"></li>
+					<li class="interact"></li>
+				</ul>
+				<div class="n-upDown" onclick="packUp(this)"></div>
+			</div>
+			
+			<div class="n-con" >
+				<!--实况直播-->
+				<div class="n-clock live on">
+					<ul id="liveList">
+						
+					</ul>
+				</div>
+				<!--边看边聊-->
+				<div class="n-clock live_chat">
+						<ul class="chat">
+						</ul>
+				</div>
+				<!--互动-->
+				<div class="n-clock interact">
+					<iframe id="interact" src="" frameborder="0" name="interact" scrolling="auto" width="100%"></iframe>
+				</div>
+				
+			</div>
+		</div>
+		<script>
+			//myscroll=new iScroll("wrapper",{hScrollbar:true, vScrollbar:true,hScroll:false,vScroll:true,fixedScrollbar:true});
+		</script>
+		<!-- 输入框 -->
+		<!-- <div class="inputBox">
+			<a href="javascript:;" id="hasApp"><input type="text" value="我来说两句" disabled/></a>
+			<a href="javascript:;" id="hasApp"><span class="share"></span></a>
+		</div> -->
+
+		<!--弹层-->
+		<div class="n-appDownLoad clearfix">
+			<p>下载央视影音客户端</p>
+			<a href="javascript:;" id="hasApp"><div class="n-btn">点击下载</div></a>
+			<div class="n-close" onclick="closeW()"></div>
+		</div>
+		
+		<script src="js/swiper.min.js"></script>
+		<!-- html5 player -->
+		<script type="text/javascript" src="http://js.player.cntv.cn/creator/swfobject.js"></script>
+			<!--直播播放器js-->
+			<script type="text/javascript" src="http://js.player.cntv.cn/creator/html5_liveplayer_share.js"></script>
+			<!--点播播放器js-->
+			<!--<script type="text/javascript" src="http://js.player.cntv.cn/creator/common_standard_multi.js"></script>-->
+			
+            <script type="text/javascript" src="http://js.player.cntv.cn/creator/html5_vodplayer_share.js"></script>
+		
+		<script src="js/index.js"></script>
+		
+		 <!-- Initialize Swiper -->
+	     <script> 
+	     	//设置主页面数据的js	
+			var setcontent = new setContent();
+			setcontent.commonCall();
+			setInterval(function(){
+				var vdo = $("#index_video_box video").attr("id");
+				$("#"+vdo).css("zIndex","1");
+				$("#index_video_box").css({'width': '100%', 'height': '9rem'});
+				$("#"+vdo).css({"width":"100%","height":"9rem"});
+				adjustNavWidth();
+				if($(".n-upDown").hasClass('on')){
+					$("#"+vdo).css({"width":"100%","height":"3.7rem"});
+					$("#index_video_box").css({'width': '100%', 'height': '3.7rem'});
+					$(".n-play").css({"width":"100%","height":"3.7rem"});
+					var n_play_w = $(".n-play").width();
+					var n_VB_h = $(".n-boxPause").height();
+					$(".play_on").css({'width': n_play_w, 'height': "3.7rem"});
+					$(".n-play").css({"height":n_VB_h,"lineHeight":"3.7rem"});
+				}else{
+					$("#index_video_box").css({'width': '100%', 'height': '9rem'});
+					$(".n-play").css({"height":"3.7rem","lineHeight":"3.7rem"});
+					var index_video_box_w = $("#index_video_box").width();
+					var index_video_box_h = $("#index_video_box").height();
+					$(".play_down").css({'width': index_video_box_w, 'height': index_video_box_h});
+				};
+			},1);
+
+			function doJumpToAppPlayer(dID,html5PlayerWidth,html5PlayerHeight){
+			    var dIDname = "#"+dID
+			    $(dIDname).css("display","none");
+			    $(dIDname).children().remove();
+				$("#maskbox").css({'display':'block','width':html5PlayerWidth+"px",'height':html5PlayerHeight+"px"});
+				$("#maskbox p").css('line-height',html5PlayerHeight+'px');
+		}
+			
+			
+
+	    </script>
+	    <script type='text/javascript'>
+			(function(){
+				var s = document.createElement('script');
+				s.type = 'text/javascript';
+				s.async = true;
+				s.src = (location.protocol == 'https:' ? 'https://ssl.' : 'http://static.') + 'gridsumdissector.com/js/Clients/GWD-002971-160517/gs.js';
+				var firstScript = document.getElementsByTagName('script')[0];
+				firstScript.parentNode.insertBefore(s, firstScript);
+			})();
+					</script>
+			<!-- START WRating v1.0 --> 
+			  <script type="text/javascript">
+				_vjTrack("");
+			</script>
+			  <noscript>
+			  <img src="http://cntv.wrating.com/a.gif?c=860010-1120010300" width="1" height="1" />
+			  </noscript>
+			  <!-- END WRating v1.0 -->
+
+ 
+
+	</body>
+</html>

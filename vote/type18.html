@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<title>央视影音</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/live.css">
+	<script src="http://www.cctv.com/Library/a2.js"></script>
+</head>
+<body>
+	<div id="content">
+		<div class="top-menu">
+			<div class="live-status">
+				<span class="user-img">
+					<img src="img/user-img.png" alt="用户头像">
+				</span>
+				<div class="content">
+					<h4 id="author"></h4>
+					<!-- <span class="online-num"></span> -->
+					<span class="n-dataOnline"><p></p></span>
+					<span class="bg"></span>
+				</div>
+			</div>
+			<!-- <a href="javascript:;"><div class="close text-hide">关闭</div></a> -->
+			
+		</div>
+
+		<div class="bg-video" id="video_box">
+			<!-- <video src="a.mp4" autoplay></video> -->
+		</div>
+		<div class="maskbox" id="maskbox">
+			<p>想看完整版<a id="newLayer" href="javascript:;">打开央视影音客户端</a></p>
+		</div>
+
+		<div class="bottom-bar">
+			<a href="" class="hasApp"><input type="text" value="说点什么吧" disabled></a>
+			<span class="topicons">
+				<a href="javascript:;" class="hasApp"><span class="icon share">分享</span></a>
+				<a href="javascript:;" class="hasApp"><span class="icon like">喜欢</span></a>
+				<a href="javascript:;" class="hasApp"><div class="openApp"><i></i>用央视影音打开</div></a>
+			</span>
+			<div class="share-panel hidden">
+				<a href="" class="hasApp"><h5>分享至</h5></a>
+				<div class="bdsharebuttonbox icons">
+					<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+					<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+					<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+					<a href="#" class="bds_weixinpengyou" data-cmd="weixin" title="分享到朋友圈">朋友圈</a>
+				</div>
+				<button class="cancel">取消</button>
+			</div>
+
+		</div>
+	</div>
+	
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/wauto.js"></script>
+	<!-- html5 player -->
+	<script type="text/javascript" src="http://js.player.cntv.cn/creator/swfobject.js"></script>
+		<!--直播播放器js-->
+		<script type="text/javascript" src="http://js.player.cntv.cn/creator/html5_liveplayer_share.js"></script>
+		<!--点播播放器js-->
+		 <script type="text/javascript" src="http://js.player.cntv.cn/creator/html5_vodplayer_share.js"></script>
+	
+	<script src="js/index.js"></script>
+	<script>
+		var liveFunction = new LiveFunction();
+		
+			setInterval(function(){
+				var bvh = $(window).height();
+				var bvw = $(window).width();
+				$("#video_box").css({"width":bvw,"height":bvh,"position":"absolute","top":"0","left":"0","zIndex":"10"});
+				$("#video_box video").css({"width":bvw,"height":bvh});
+			},1);
+			
+			function doJumpToAppPlayer(dID,w,h){
+				    var dIDname = "#"+dID
+					$(dIDname).remove();
+					$("#maskbox").css({'display':'block','width':w+"px",'height':h+"px"});
+					$("#maskbox p").css('line-height',h+'px');
+			
+			}
+		
+
+	</script>
+	<script type='text/javascript'>
+			(function(){
+				var s = document.createElement('script');
+				s.type = 'text/javascript';
+				s.async = true;
+				s.src = (location.protocol == 'https:' ? 'https://ssl.' : 'http://static.') + 'gridsumdissector.com/js/Clients/GWD-002971-160517/gs.js';
+				var firstScript = document.getElementsByTagName('script')[0];
+				firstScript.parentNode.insertBefore(s, firstScript);
+			})();
+			<!-- START WRating v1.0 --> 
+		</script>
+			<!-- START WRating v1.0 --> 
+			  <script type="text/javascript">
+				_vjTrack("");
+			</script>
+			  <noscript>
+			  <img src="http://cntv.wrating.com/a.gif?c=860010-1120010300" width="1" height="1" />
+			  </noscript>
+
+ 
+</html>
